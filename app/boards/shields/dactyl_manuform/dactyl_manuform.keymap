@@ -1,0 +1,57 @@
+/*
+ * Copyright (c) 2020 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ */
+
+
+#include <behaviors.dtsi>
+#include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/bt.h>
+#define DEFAULT 0
+#define LOWER   1
+
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+
+        default_layer {
+// ------------------------------------------------------------------------------------------------------------
+// |  ESC  |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |   -   |
+// |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   |   \   |
+// |  CTRL |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
+// | SHIFT |  Z  |  X  |  C   |  V   |  B   |                   |  N   |  M    |  ,    |  .   |   /   | SHIFT |
+//               | +   | BLSH |                                                | LBKT  | RBKT |
+//                     | DEL  | BSPC |                          | RET  | SPC   |
+//                     | FN   | LCTL |                          | RALT  | RCTL |
+//                     | HOME | END  |                          | PGUP | PGDN  |
+        bindings = <
+&kp ESC   &kp N1    &kp N2     &kp N3          &kp N4    &kp N5                &kp N6    &kp N7    &kp N8    &kp N9    &kp N0   &kp MINUS
+&kp TAB   &kp Q     &kp W      &kp E           &kp R     &kp T                 &kp Y     &kp U     &kp I     &kp O     &kp P    &kp BSLH
+&kp LCTRL &kp A     &kp S      &kp D           &kp F     &kp G                 &kp H     &kp J     &kp K     &kp L     &kp SEMI &kp SQT
+&kp LSHFT &kp Z     &kp X      &kp C           &kp V     &kp B                 &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH &kp RSHFT
+                    &kp EQUAL  &lt LOWER BSLH  &kp BSPC  &kp DEL               &kp RET   &kp SPACE &kp LBKT  &kp RBKT
+                    &kp LGUI   &kp LCTRL       &kp END   &kp HOME              &kp PG_UP &kp PG_DN &kp RALT &mo LOWER 
+            >;
+        };
+        control_layer {
+// ------------------------------------------------------------------------------------------------------------
+// |  ESC  |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |   -   |
+// |  TAB  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   |   \   |
+// |  CTRL |  A  |  S  |  D   |  F   |  G   |                   | LEFT | DOWN  |  UP   | RIGHT|   ;   |   '   |
+// | SHIFT |  Z  |  X  |  C   |  V   |  B   |                   |  N   |  M    |  ,    |  .   |   /   | SHIFT |
+//               | GRV | BSLH |                                                | LBRC  | RBRC |
+//                     | DEL  | BSPC |                          | RET  | SPC   |
+//                     | FN   | LCTL |                          | RALT  | RCTL |
+//                     | HOME | END  |                          | PGUP | PGDN  |
+        bindings = <
+&kp ESC   &kp F1    &kp F2     &kp F3       &kp F4      &kp F5            &kp F6    &kp F7   &kp F8    &kp F9    &kp F10  &kp MINUS
+&kp TAB   &kp Q     &kp W      &kp E        &kp R       &kp T             &kp Y     &kp U    &kp I     &kp O     &kp P    &kp BSLH
+&kp LCTRL &kp A     &kp S      &kp D        &kp F       &kp G             &kp LEFT  &kp DOWN &kp UP    &kp RIGHT &kp SEMI &kp SQT
+&kp LSHFT &kp Z     &kp X      &kp C        &kp V       &kp B             &kp N     &kp M    &kp COMMA &kp DOT   &kp FSLH &kp RSHFT
+                    &kp GRAVE  &kp BSLH     &kp BSPC    &kp DEL           &kp RET   &kp SPACE &kp LBRC  &kp RBRC
+                    &reset     &kp LCTRL    &bt BT_NXT  &bt BT_PRV        &kp PG_UP &kp PG_DN &kp RALT  &mo DEFAULT 
+            >;
+        };
+    };
+};
