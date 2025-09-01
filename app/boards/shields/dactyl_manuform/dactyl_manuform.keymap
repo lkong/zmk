@@ -31,7 +31,7 @@
 &kp LCTRL &kp A     &kp S      &kp D           &kp F     &kp G                 &kp H     &kp J     &kp K     &kp L     &kp SEMI &kp SQT
 &kp LSHFT &kp Z     &kp X      &kp C           &kp V     &kp B                 &kp N     &kp M     &kp COMMA &kp DOT   &kp FSLH &kp RSHFT
                     &kp EQUAL  &lt LOWER BSLH  &kp BSPC  &kp DEL               &kp RET   &kp SPACE &kp LBKT  &kp RBKT
-                    &kp LGUI   &kp LCTRL       &kp END   &kp HOME              &kp PG_UP &kp PG_DN &kp RALT &mo LOWER 
+                    &kp LGUI   &kp LCTRL       &kp END   &kp HOME              &kp PG_UP &kp PG_DN &kp RALT &mo LOWER
             >;
         };
         control_layer {
@@ -50,7 +50,7 @@
 &kp LCTRL &kp A     &kp S      &kp D        &kp F         &kp G             &kp LEFT  &kp DOWN &kp UP    &kp RIGHT &kp SEMI &kp SQT
 &kp LSHFT &kp Z     &kp X      &kp C        &kp V         &kp B             &kp N     &kp M    &kp COMMA &kp DOT   &kp FSLH &kp RSHFT
                     &kp GRAVE  &kp BSLH     &kp BSPC      &kp DEL           &kp RET   &kp SPACE &kp LBRC  &kp RBRC
-                    &reset     &kp LCTRL    &bt BT_SEL 0  &bt BT_SEL 1        &kp PG_UP &kp PG_DN &kp RALT  &mo DEFAULT 
+                    &reset     &kp LCTRL    &bt BT_SEL 0  &bt BT_SEL 1        &kp PG_UP &kp PG_DN &kp RALT  &mo DEFAULT
             >;
         };
     };
