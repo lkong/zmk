@@ -18,9 +18,6 @@ if SHIELD_DACTYL_MANUFORM_RIGHT
 config ZMK_KEYBOARD_NAME
     default "Dactyl Right"
 
-config USB
-    default y
-
 endif
 
 if SHIELD_DACTYL_MANUFORM_LEFT || SHIELD_DACTYL_MANUFORM_RIGHT
